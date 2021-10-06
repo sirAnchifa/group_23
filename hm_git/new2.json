@@ -1,1 +1,11 @@
-{"full_name":"Timoshkina Margarita Aleksandrovna", "age":24, "animals": null, "salary":"As much as possible"}
+{
+  "full_name":"Timoshkina Margarita Aleksandrovna", 
+  "age":24, 
+  "animals": null, 
+  "salary":"As much as possible", 
+  "favorite_movie":"Dune", 
+  "favorite_series":"Lost", 
+  "favorite_food":"Poke",
+  "favorite_season":"Autumn",
+  "wish_country":"Germany"
+}
