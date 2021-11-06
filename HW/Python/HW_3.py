@@ -111,3 +111,100 @@ else:
 #                     31.6 Сделать elif с остальными валютами
 # …
 #                     31.7 Последним оставить else, при выполнений которого в консоль выведется (“Unknow currency”)
+
+
+print("===================================================")
+def is_number(str):
+    try:
+        float(str)
+        return True
+    except ValueError:
+        return False
+run = True
+while run:
+    print("Добро пожаловать в валютный конвертер!")
+    print("Доступные валюты для конвертации: \n1: Евро\n2: Гривна\n3: Швейцарский франк\n4: Российский рубль\n5: Белорусский рубль")
+    curr = input("Введите номер необходимой валюты: ")
+    curr_amount = input("Введите необходимое количество: ")
+    if curr == '1' and is_number(curr_amount):
+        curr_usd = float(curr_amount) / usd_eur_rate
+        print(curr_amount, eur_item, "=", round(curr_usd, 2), usd_item)
+        while True:
+            res = input("Желаете попробовать ещё? y/n: ")
+            if res == 'y':
+                break
+            elif res == 'n':
+                run = False
+                break
+            else:
+                print("Введите 'y', чтобы попробовать еще раз или введите 'n', чтобы завершить работу!")
+    elif curr == '2' and is_number(curr_amount):
+        curr_usd = float(curr_amount) / usd_uah_rate
+        print(curr_amount, uah_item, "=", round(curr_usd, 2), usd_item)
+        while True:
+            res = input("Желаете попробовать ещё? y/n: ")
+            if res == 'y':
+                break
+            elif res == 'n':
+                run = False
+                break
+            else:
+                print("Введите 'y', чтобы попробовать еще раз или введите 'n', чтобы завершить работу!")
+    elif curr == '3' and is_number(curr_amount):
+        curr_usd = float(curr_amount) / usd_chf_rate
+        print(curr_amount, chf_item, "=", round(curr_usd, 2), usd_item)
+        while True:
+            res = input("Желаете попробовать ещё? y/n: ")
+            if res == 'y':
+                break
+            elif res == 'n':
+                run = False
+                break
+            else:
+                print("Введите 'y', чтобы попробовать еще раз или введите 'n', чтобы завершить работу!")
+    elif curr == '4' and is_number(curr_amount):
+        curr_usd = float(curr_amount) / usd_rub_rate
+        print(curr_amount, rub_item, "=", round(curr_usd, 2), usd_item)
+        while True:
+            res = input("Желаете попробовать ещё? y/n: ")
+            if res == 'y':
+                break
+            elif res == 'n':
+                run = False
+                break
+            else:
+                print("Введите 'y', чтобы попробовать еще раз или введите 'n', чтобы завершить работу!")
+    elif curr == '5' and is_number(curr_amount):
+        curr_usd = float(curr_amount) / usd_byn_rate
+        print(curr_amount, byn_item, "=", round(curr_usd, 2), usd_item)
+        while True:
+            res = input("Желаете попробовать ещё? y/n: ")
+            if res == 'y':
+                break
+            elif res == 'n':
+                run = False
+                break
+            else:
+                print("Введите 'y', чтобы попробовать еще раз или введите 'n', чтобы завершить работу!")
+    elif not is_number(curr_amount):
+        print("Упс! Вы ввели неккоректное количество!")
+        while True:
+            res = input("Желаете попробовать ещё? y/n: ")
+            if res == 'y':
+                break
+            elif res == 'n':
+                run = False
+                break
+            else:
+                print("Введите 'y', чтобы попробовать еще раз или введите 'n', чтобы завершить работу!")
+    else:
+        print("Упс! Вы ввели неккоректную валюту!")
+        while True:
+            res = input("Желаете попробовать ещё? y/n: ")
+            if res == 'y':
+                break
+            elif res == 'n':
+                run = False
+                break
+            else:
+                print("Введите 'y', чтобы попробовать еще раз или введите 'n', чтобы завершить работу!")
