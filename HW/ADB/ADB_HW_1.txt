@@ -15,7 +15,7 @@ adb shell screencap /storage/emulated/0/DCIM/screen.png && add pull /storage/emu
 adb logcat | grep todolist
 
  6. Скопировать логи приложения todolist на компьютер.
-adb logcat -d > ~/Desktop/todolist.log | grep todolist
+adb logcat | grep todolist > ~/Desktop/todolist.log
 
 
  7. Удалить приложение todolist с телефона через ADB
